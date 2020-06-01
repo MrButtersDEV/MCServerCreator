@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, Menu} = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -17,7 +17,12 @@ function createWindow(){
     }));
 
     //DEV MODE ONLY - Open devtools
-    win.webContents.openDevTools();
+    var devmode = true;
+    if (devmode) {
+        win.webContents.openDevTools();
+    } else {
+        Menu.setApplicationMenu(false)
+    }
     
     win.on('closed', () => {
         win = null;
