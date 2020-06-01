@@ -1,0 +1,14 @@
+{
+  "name": "mcservercreator",
+  "version": "1.0.0",
+  "description": "Speedy squick server maker",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "MrButters",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^9.0.1"
+  }
+}
