@@ -9,6 +9,7 @@
   "author": "MrButters",
   "license": "ISC",
   "dependencies": {
-    "electron": "^9.0.1"
+    "electron": "^9.0.1",
+    "xterm": "^4.6.0"
   }
 }

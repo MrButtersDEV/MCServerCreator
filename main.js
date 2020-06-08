@@ -7,7 +7,14 @@ let win;
 
 function createWindow(){
     // create window
-    win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/Main-Blue.png'})
+    win = new BrowserWindow({
+      width:800,
+      height:600,
+      icon:__dirname+'/img/Main-Blue.png',
+      webPreferences: {
+        nodeIntegration: true
+      }
+    })
 
     // load index.html
     win.loadURL(url.format({
