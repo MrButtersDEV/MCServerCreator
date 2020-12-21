@@ -7,14 +7,7 @@ let win;
 
 function createWindow(){
     // create window
-    win = new BrowserWindow({
-      width:800,
-      height:600,
-      icon:__dirname+'/img/Main-Blue.png',
-      webPreferences: {
-        nodeIntegration: true
-      }
-    })
+    win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/Main-Blue.png'})
 
     // load index.html
     win.loadURL(url.format({
@@ -23,7 +16,7 @@ function createWindow(){
         slashes: true
     }));
 
-    //DEV MODE ONLY - Open devtools
+    //DEV MODE ONLY - Open devtools 
     var devmode = true;
     if (devmode) {
         win.webContents.openDevTools();

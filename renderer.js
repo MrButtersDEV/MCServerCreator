@@ -17,10 +17,21 @@ newServerBtn.addEventListener('click', function(e){
     console.log("Output data: '" + data + "'");
   });
 
+  // var term = new Terminal({
+  //   cursorBlink: true
+  // });
+  // term.open(termDiv);
+  // term.write("Hello! I am dumb... ");
+});
+
+
   var term = new Terminal({
     cursorBlink: true
   });
-  term.open(termDiv);
-  term.write("Hello! I am dumb... ");
-});
+  
+  term.open(document.getElementById("terminal"));
+  term.write("Hello!");
 
+  term.onData(e => {
+    term.write(e);
+  });
